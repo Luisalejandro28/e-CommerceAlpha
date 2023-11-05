@@ -9,16 +9,19 @@ function crearTarjetas() {
       const tituloElemento = document.createElement("h1");
       const precioElemento = document.createElement("h3");
       const botonElemento = document.createElement("button");
+      const botonEliminar = document. createElement("button");
   
       tituloElemento.textContent = cards.nombre;
       imgElemento.textContent = cards.img;
       precioElemento.textContent = cards.precio;
-      botonElemento.textContent = 'Comprar';
+      botonElemento.textContent = "Comprar";
+      botonEliminar.textContent = "Eliminar"
   
       cardElemento.appendChild(tituloElemento);
       cardElemento.appendChild(imgElemento);
       cardElemento.appendChild(precioElemento);
       cardElemento.appendChild(botonElemento);
+      cardElemento.appendChild(botonEliminar);
       containerCard.appendChild(cardElemento);
   
       botonElemento.addEventListener("click", () => {
@@ -34,6 +37,16 @@ function crearTarjetas() {
   
         showCarShop(carShop); // Actualizar el contenido del carrito
       });
+
+      botonEliminar.addEventListener("click",()=>{
+        deleteProduct(cards);
+        Swal.fire({
+          title: 'Producto eliminado',
+          text: cards.nombre,
+          icon: 'warning',
+          confirmButtonText: 'OK'
+        })
+      })
     });
   }
 

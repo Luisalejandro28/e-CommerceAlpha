@@ -33,4 +33,5 @@ function deleteProduct (producto){
             break;
         };
     };
+    localStorage.setItem("carShop",JSON.stringify(carShop));
 };
