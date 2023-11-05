@@ -23,8 +23,15 @@ function showCarShop (){
         let amountProduct = carShop[i].cantidad;
 
         console.log((product.nombre + "- Cantidad: " + amountProduct));
+
+        Swal.getPopup(
+            'success',
+        )
     };
 };
+
+
+
 //Funcion para remover un articulo del carrito
 function deleteProduct (producto){
     for (let i = 0; i < carShop.length; i++){
