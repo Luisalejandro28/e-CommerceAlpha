@@ -9,7 +9,9 @@ function crearTarjetas() {
       const tituloElemento = document.createElement("h1");
       const precioElemento = document.createElement("h3");
       const botonElemento = document.createElement("button");
+      botonElemento.classList.add("btn")
       const botonEliminar = document. createElement("button");
+      botonEliminar.classList.add("btn");
   
       tituloElemento.textContent = cards.nombre;
       imgElemento.textContent = cards.img;
