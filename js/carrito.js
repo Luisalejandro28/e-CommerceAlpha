@@ -23,10 +23,6 @@ function showCarShop (){
         let amountProduct = carShop[i].cantidad;
 
         console.log((product.nombre + "- Cantidad: " + amountProduct));
-
-        Swal.getPopup(
-            'success',
-        )
     };
 };
 
