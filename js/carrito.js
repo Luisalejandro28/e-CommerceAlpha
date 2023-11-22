@@ -2,39 +2,58 @@
 let carShop = [];
 
 // Creamos la funcion agregar
-function addCar (producto, cantidad){
-    carShop.push({producto: producto, cantidad:cantidad});
-    localStorage.setItem("carShop",JSON.stringify(carShop));
+function addCar(producto) {
+    // Obtener los datos del carrito del almacenamiento local
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  
+    // Agregar el producto al carrito
+    carrito.push(producto);
+  
+    // Guardar los datos actualizados del carrito en el almacenamiento local
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+
+    mostrarCarrito(carShop);
+};
+// Eliminar producto del carrito
+function eliminarDelCarrito(producto) {
+    // Obtener los datos del carrito del almacenamiento local
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  
+    // Encontrar el índice del producto que deseas eliminar
+    const index = carrito.findIndex(item => item.id === producto.id);
+  
+    // Verificar si se encontró el producto
+    if (index !== -1) {
+      // Eliminar el producto del array del carrito
+      carrito.splice(index, 1);
+  
+      // Guardar los datos actualizados del carrito en el almacenamiento local
+      localStorage.setItem("carrito", JSON.stringify(carrito));
+  
+      // Mostrar nuevamente el contenido del carrito
+    }
+    mostrarCarrito();
+  }
+
+  function mostrarCarrito() {
+    // Obtener el contenedor donde se mostrará el contenido del carrito
+    const containerCarrito = document.getElementById("container-carrito");
+    
+    // Limpiar el contenedor
+    containerCarrito.innerHTML = "";
+  
+    // Obtener los datos del carrito del almacenamiento local
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  
+    // Recorrer los productos del carrito y crear elementos HTML para mostrarlos
+    carrito.forEach(producto => {
+      const productoElemento = document.createElement("div");
+      productoElemento.textContent = producto.nombre;
+  
+      // Agregar el elemento del producto al contenedor
+      containerCarrito.appendChild(productoElemento);
+    });
 }
-//Creamos una funcion para calcular el Total a pagar
-function paymentTotal (){
-    let total = 0;
-    for (let price = 0; price < carShop.length; price++){
-        let product = carShop[price].producto;
-        let amountProduct = carShop[price].cantidad;
-        
-        total += product.precio * amountProduct
-    };
-};
-// Creamos una funcion para mostrar el contenido del carrito
-function showCarShop (){
-    for(let i = 0; i < carShop.length; i++ ){
-        let product = carShop[i].producto;
-        let amountProduct = carShop[i].cantidad;
 
-        console.log((product.nombre + "- Cantidad: " + amountProduct));
-    };
-};
-
-
-
-//Funcion para remover un articulo del carrito
-function deleteProduct (producto){
-    for (let i = 0; i < carShop.length; i++){
-        if(carShop[i].producto === producto) {
-            carShop.splice(i,1);
-            break;
-        };
-    };
-    localStorage.setItem("carShop",JSON.stringify(carShop));
-};
+// Llamar a la función para mostrar el contenido del carrito al cargar la página
+mostrarCarrito();

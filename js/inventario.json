@@ -1,0 +1,122 @@
+[
+    {
+      "name": "product1",
+      "imagen": "./img/camisaverde.jpg",
+      "precio": 10,
+      "ID": 12345
+    },
+    {
+      "name": "product2",
+      "imagen": "./img/verdecamisa.jpg",
+      "precio": 15,
+      "ID": 67890
+    },
+    {
+      "name": "product3",
+      "imagen": "./img/sueter.jpg",
+      "precio": 20,
+      "ID": 23456
+    },
+    {
+      "name": "product4",
+      "imagen": "./img/chaqueta.jpg",
+      "precio": 25,
+      "ID": 78901
+    },
+    {
+      "name": "product5",
+      "imagen": "./img/pantalon.jpg",
+      "precio": 30,
+      "ID": 34567
+    },
+    {
+      "name": "product6",
+      "imagen": "./img/pantalon1.jpg",
+      "precio": 35,
+      "ID": 89012
+    },
+    {
+      "name": "product7",
+      "imagen": "./img/short.jpg",
+      "precio": 40,
+      "ID": 45678
+    },
+    {
+      "name": "product8",
+      "imagen": "./img/blazer.jpg",
+      "precio": 45,
+      "ID": 90123
+    },
+    {
+      "name": "product9",
+      "imagen": "./img/dresspants.jpg",
+      "precio": 50,
+      "ID": 56789
+    },
+    {
+      "name": "product10",
+      "imagen": "./img/hat.jpg",
+      "precio": 55,
+      "ID": 12345
+    },
+    {
+      "name": "product11",
+      "imagen": "./img/shoes.jpg",
+      "precio": 60,
+      "ID": 67890
+    },
+    {
+      "name": "product12",
+      "imagen": "./img/blazer.jpg",
+      "precio": 65,
+      "ID": 23456
+    },
+    {
+      "name": "product13",
+      "imagen": "./img/tshirt.jpg",
+      "precio": 70,
+      "ID": 78901
+    },
+    {
+      "name": "product14",
+      "imagen": "./img/chaqueta2.jpg",
+      "precio": 75,
+      "ID": 34567
+    },
+    {
+      "name": "product15",
+      "imagen": "./img/chaqueta3.jpg",
+      "precio": 80,
+      "ID": 89012
+    },
+    {
+      "name": "product16",
+      "imagen": "./img/shoes1.jpg",
+      "precio": 85,
+      "ID": 45678
+    },
+    {
+      "name": "product17",
+      "imagen": "./img/shoes2.jpg",
+      "precio": 90,
+      "ID": 90123
+    },
+    {
+      "name": "product18",
+      "imagen": "./img/franela3.jpg",
+      "precio": 95,
+      "ID": 56789
+    },
+    {
+      "name": "product19",
+      "imagen": "./img/franela4.jpg",
+      "precio": 100,
+      "ID": 12345
+    },
+    {
+      "name": "product20",
+      "imagen": "./img/pant.jpg",
+      "precio": 105,
+      "ID": 67890
+    }
+  ]
