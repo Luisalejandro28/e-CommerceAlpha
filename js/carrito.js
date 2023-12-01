@@ -20,7 +20,7 @@ function eliminarDelCarrito(producto) {
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
   
     // Encontrar el índice del producto que deseas eliminar
-    const index = carrito.findIndex(item => item.id === producto.id);
+    const index = carrito.findIndex(item => item.ID === producto.ID);
   
     // Verificar si se encontró el producto
     if (index !== -1) {
